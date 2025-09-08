@@ -1,0 +1,64 @@
+/* app.css — minimal, dashboard-friendly base */
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  background: #f8faff; /* soft product background */
+  color: #1e1b39;
+  -webkit-font-smoothing: antialiased; /* crisper text */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent mobile/trackpad bounce that can break sticky headers */
+html,
+body {
+  overscroll-behavior: none;
+}
+
+/* Make the app use the whole viewport without inner page padding */
+#root {
+  display: block;
+}
+
+/* Accessible helper */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Subtle premium scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c9ceea #eef0fb; /* Firefox */
+}
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #eef0fb;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c9ceea;
+  border-radius: 10px;
+  border: 2px solid #eef0fb;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #b8bee6;
+}
